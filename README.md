@@ -1,13 +1,8 @@
-# 2020_GROUP_04
-# Team Members: 
-- Habibatallah Abouelseoud
-- Rachel Jaisey 
-- Edwin Cockeye Brown
-- Abdulrahman Hassan
+
 
 # The Library for the software application 
 
-Group 04 would like to present ArrowStar, which is a cross platform software that allows the possibility of inspecting and observing many different 3D models. The software provides many beneficial aspects that will be dissected in the report. 
+ArrowStar, which is a cross platform software that allows the possibility of inspecting and observing many different 3D models. The software provides many beneficial aspects that will be dissected in the report. 
 A user guide and an overview of the ArrowStar and its development to completion, that will discuss many unanswered questions such as, features, configuration, installing the software, and how to functionally use the software. 
 
 # ArrowStar features: 
