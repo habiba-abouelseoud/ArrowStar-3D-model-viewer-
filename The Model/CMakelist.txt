@@ -1,0 +1,74 @@
+
+# This CMakeList file will load all the individual class executable files 
+cmake_minimum_required(VERSION 2.8)
+project(Computing)
+
+# To give the path for the header files to be located
+include_directories(inc)
+
+# To ensure that each library includes the header file requird
+add_library(vector_3D src / vector_3D.cpp; inc / vector_3D.h)
+add_library(Cell src / Cell.cpp; src; src / vector_3D.cpp; src / Material.cpp; inc / Cell.h; inc / vector_3D.h; inc / Material.h)
+add_library(Material src / Material.cpp; inc / Material.h)
+add_library(Model src / Model.cpp; src / Cell.cpp; src / vector_3D.cpp; src / Material.cpp; inc / Model.hpp; inc / Cell.hpp; inc / vector_3D.h; inc / Material.h)
+
+
+
+if (NOT BUILD_SHARED_LIBS)
+add_definitions(-Dmaths_STATIC)
+endif()
+
+
+
+# To create exe file to each testing code
+add_executable(Testing_CodeForvector_3D Class 1 - Vector - 3D / Testing_CodeForvector_3D.cpp)
+add_executable(Testing_CodeForCell Class 2 - Cell / Testing_CodeForCell.cpp)
+add_executable(Testing_CodeForMaterial Class 3 - Material / Testing_CodeForMaterial.cpp)
+add_executable(Testing_CodeForModel Class 4 - Model / Testing_CodeForModel.cpp)
+
+
+
+
+# To link the.exe file and libraries
+target_link_libraries(Testing_CodeForvector_3D vector_3D)
+target_link_libraries(Testing_CodeForCell  Cell)
+target_link_libraries(Testing_CodeForMaterial Material)
+target_link_libraries(Testing_CodeForModel Model)
+
+
+
+   ADD_CUSTOM_COMMAND(TARGET Test_Code_For_Model POST_BUILD
+	COMMAND ${ CMAKE_COMMAND } - E copy
+	${ CMAKE_CURRENT_SOURCE_DIR } / Files_For_Model / Model_Example1.mod
+	${ CMAKE_CURRENT_SOURCE_DIR } / _build / Model_Example1.mod)
+
+	ADD_CUSTOM_COMMAND(TARGET Test_Code_For_Model POST_BUILD
+		COMMAND ${ CMAKE_COMMAND } - E copy
+		${ CMAKE_CURRENT_SOURCE_DIR } / Files_For_Model / Model_1.txt
+		${ CMAKE_CURRENT_SOURCE_DIR } / _build / Model_1.txt)
+
+
+	ADD_CUSTOM_COMMAND(TARGET Test_Code_For_Model POST_BUILD
+		COMMAND ${ CMAKE_COMMAND } - E copy
+		${ CMAKE_CURRENT_SOURCE_DIR } / Files_For_Model / Model_Example2.mod
+		${ CMAKE_CURRENT_SOURCE_DIR } / _build / Model_Example2.mod)
+
+	ADD_CUSTOM_COMMAND(TARGET Test_Code_For_Model POST_BUILD
+		COMMAND ${ CMAKE_COMMAND } - E copy
+		${ CMAKE_CURRENT_SOURCE_DIR } / Files_For_Model / Model_2.txt
+		${ CMAKE_CURRENT_SOURCE_DIR } / _build / Model_2.txt)
+
+
+	ADD_CUSTOM_COMMAND(TARGET Test_Code_For_Model POST_BUILD
+		COMMAND ${ CMAKE_COMMAND } - E copy
+		${ CMAKE_CURRENT_SOURCE_DIR } / Files_For_Model / Model_Example3.mod
+		${ CMAKE_CURRENT_SOURCE_DIR } / _build / Model_Example3.mod)
+
+	ADD_CUSTOM_COMMAND(TARGET Test_Code_For_Model POST_BUILD
+		COMMAND ${ CMAKE_COMMAND } - E copy
+		${ CMAKE_CURRENT_SOURCE_DIR } / Files_For_Model / Model_3.txt
+		${ CMAKE_CURRENT_SOURCE_DIR } / _build / Model_3.txt)
+
+
+
+

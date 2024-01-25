@@ -1,0 +1,10 @@
+C:/Users/rjais/group_work/vectorClass/build/CMakeFiles/NightlyMemoryCheck.dir
+C:/Users/rjais/group_work/vectorClass/build/CMakeFiles/Experimental.dir
+C:/Users/rjais/group_work/vectorClass/build/CMakeFiles/Continuous.dir
+C:/Users/rjais/group_work/vectorClass/build/CMakeFiles/Nightly.dir
+C:/Users/rjais/group_work/vectorClass/build/CMakeFiles/test1.dir
+C:/Users/rjais/group_work/vectorClass/build/CMakeFiles/calc.dir
+C:/Users/rjais/group_work/vectorClass/build/CMakeFiles/maths.dir
+C:/Users/rjais/group_work/vectorClass/build/CMakeFiles/RUN_TESTS.dir
+C:/Users/rjais/group_work/vectorClass/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/rjais/group_work/vectorClass/build/CMakeFiles/ZERO_CHECK.dir
